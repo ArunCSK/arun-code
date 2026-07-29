@@ -16,6 +16,11 @@ dependencies = [
     "python-dotenv>=1.0",
 ]
 
+[project.scripts]
+arun-code = "arun_code.main:main"
+ac = "arun_code.main:main"
+
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
