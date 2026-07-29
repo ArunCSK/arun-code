@@ -1,50 +1,50 @@
-# [PROJECT_NAME] Constitution
+# Speckit Development Constitution
 <!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
+### Spec-First Development
 <!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
+All features start with a formal specification that defines scope, requirements, and acceptance criteria before any code is written.
 <!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### [PRINCIPLE_2_NAME]
+### Test-Driven Implementation
 <!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
+Automated tests are written alongside specifications; code must pass all tests before integration.
 <!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### [PRINCIPLE_3_NAME]
+### Modular Library Architecture
 <!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
+Each feature is implemented as a self‑contained library with a clear public API, enabling reuse and independent testing.
 <!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### [PRINCIPLE_4_NAME]
+### Continuous Integration & Automated Verification
 <!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
+Every change triggers CI pipelines that run linting, tests, and verify constitution consistency.
 <!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### [PRINCIPLE_5_NAME]
+### Documentation and Versioning
 <!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
+Documentation is generated from spec and code; version numbers follow semantic versioning with explicit change logs.
 <!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-## [SECTION_2_NAME]
+## Constraints
 <!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-[SECTION_2_CONTENT]
+Include performance targets, security requirements, and compatibility guidelines for the speckit tooling.
 <!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## [SECTION_3_NAME]
+## Development Workflow
 <!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-[SECTION_3_CONTENT]
+Outline the workflow: spec authoring → review → test generation → implementation → CI verification → release.
 <!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
 <!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
+All changes to the constitution must be reviewed via a pull request; amendments require approval from at least two core maintainers and must be reflected in the spec templates.
 <!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+**Version**: 0.2.0 | **Ratified**: 2025-06-13 | **Last Amended**: 2026-07-29
 <!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

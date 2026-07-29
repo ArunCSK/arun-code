@@ -1,0 +1,36 @@
+[project]
+name = "arun-code"
+version = "0.1.0"
+description = "Local coding assistant powered by NVIDIA NIM endpoints"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "ArunCSK" },
+]
+
+dependencies = [
+    "httpx>=0.27",
+    "fastapi>=0.115",
+    "uvicorn>=0.34",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

@@ -1,0 +1,30 @@
+{
+  "name": "arun-code",
+  "displayName": "Arun-Code Assistant",
+  "description": "Chat with the local Arun-Code coding assistant",
+  "version": "0.1.0",
+  "publisher": "ArunCSK",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:arun-code.chat"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "arun-code.chat",
+        "title": "Arun-Code: Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3"
+  }
+}
