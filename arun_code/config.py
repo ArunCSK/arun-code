@@ -16,6 +16,7 @@ class NIMConfig:
     endpoint: str
     api_key: str
     model: str
+    agent_model: str
     max_tokens: int
     temperature: float
 
@@ -41,6 +42,13 @@ def load_config() -> NIMConfig:
         ),
         api_key=api_key,
         model=os.environ.get("NVIDIA_MODEL", "google/diffusiongemma-26b-a4b-it"),
+        # Agent mode needs a model that supports OpenAI-style tool calling.
+        # Defaults to a known tool-calling-capable NIM model; override with
+        # NVIDIA_AGENT_MODEL if your chat model already supports tools.
+        agent_model=os.environ.get(
+            "NVIDIA_AGENT_MODEL",
+            os.environ.get("NVIDIA_MODEL", "meta/llama-3.1-70b-instruct"),
+        ),
         max_tokens=int(os.environ.get("NVIDIA_MAX_TOKENS", "4096")),
         temperature=float(os.environ.get("NVIDIA_TEMPERATURE", "0.7")),
     )

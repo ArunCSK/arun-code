@@ -12,6 +12,7 @@ TEST_CONFIG = NIMConfig(
     endpoint="https://test.nvidia.com/v1/chat/completions",
     api_key="test-key",
     model="test-model",
+    agent_model="test-agent-model",
     max_tokens=512,
     temperature=0.5,
 )
